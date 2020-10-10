@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "This is a simple calculator application.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patbou02/calculator.git"
+  },
+  "keywords": [
+    "javascript",
+    "html"
+  ],
+  "author": "Patrick Boutin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patbou02/calculator/issues"
+  },
+  "homepage": "https://github.com/patbou02/calculator#readme"
+}
