@@ -4,6 +4,10 @@
   "description": "This is a simple calculator application.",
   "main": "app.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "run_server": "http-server ./dist -p 3000",
+    "browsersync": "browser-sync start --directory --server --files \"*.css, *.html, *.js\"",
+    "start": "npm run build && npm run run_server && npm run browsersync",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,6 +20,19 @@
   ],
   "author": "Patrick Boutin",
   "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.12.5 <2.23.2",
+    "http-server": "^0.12.3",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "webpack-cli": "^3.3.11"
+  },
   "bugs": {
     "url": "https://github.com/patbou02/calculator/issues"
   },
