@@ -1,0 +1,38 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "This is a simple calculator application.",
+  "main": "app.js",
+  "scripts": {
+    "build":  "webpack --config webpack.config.js",
+    "server": "webpack-dev-server --open",
+    "start":  "npm run build && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patbou02/calculator.git"
+  },
+  "keywords": [
+    "javascript",
+    "html"
+  ],
+  "author": "Patrick Boutin",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "ajv": "^6.12.6",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "bugs": {
+    "url": "https://github.com/patbou02/calculator/issues"
+  },
+  "homepage": "https://github.com/patbou02/calculator#readme"
+}
