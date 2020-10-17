@@ -9,56 +9,10 @@
   <!-- Custom App Scripts -->
   <script src="js/app.js"></script>
 
+  <!-- Custom CSS styles -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <style>
-    .calc-wrapper {
-      font-size: 2em;
-      color: white;
-      font-family: Helvetica, Arial;
-      display: flex;
-      flex-direction: column;
-      width: 50vw;
-      height: 50vh;
-      align-content: center;
-      background-color: lightblue;
-      outline: 2px solid black;
-    }
-    .calc-total {
-      outline: 1px solid black;
-      width: 100%;
-      height: calc(100% / 6);
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
-    .calc-body {
-      height: calc(5 * (100% / 6)); /* 80% */
-    }
-    .calc-row {
-      display: flex;
-      height: calc(100% / 5);
-      flex-direction: row;
-    }
-    .calc-key {
-      width: 25%;
-      outline: 1px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .calc-key:hover {
-      cursor: pointer;
-    }
-    .calc-key.double {
-      flex-grow: 2;
-    }
-    .role--total { background-color: #333; }
-    .role--secondary { background-color: #666; }
-    .role--main { background-color: darkorange; }
-    .role--basic { background-color: #999; }
-  </style>
   <div class="calc-wrapper">
     <div class="calc-total role--total" data-role="total">0</div>
     <div class="calc-body">
