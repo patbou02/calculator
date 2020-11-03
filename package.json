@@ -4,9 +4,9 @@
   "description": "This is a simple calculator application.",
   "main": "app.js",
   "scripts": {
-    "build":  "webpack --config webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "server": "webpack-dev-server --open",
-    "start":  "npm run build && npm run server"
+    "start": "npm run build && npm run server"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,14 @@
     "@babel/preset-env": "^7.9.6",
     "ajv": "^6.12.6",
     "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.0",
+    "style-loader": "^2.0.0",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "copy-webpack-plugin": "^5.1.1",
+    "normalize.css": "^8.0.1",
     "webpack-cli": "^3.3.11"
   },
   "bugs": {
