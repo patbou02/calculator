@@ -2,8 +2,11 @@ import 'normalize.css';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const one = document.querySelector('.one');
-  one.addEventListener('click' , e => {
-    console.log('hello');
+  const calculator = document.querySelector('.calculator__keys');
+  calculator.querySelectorAll('button').forEach((button) => {
+    button.addEventListener('click', e => {
+      console.log(e.target.classList[1]);
+    });
   });
+  
 });
