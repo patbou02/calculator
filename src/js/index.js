@@ -2,15 +2,36 @@ import 'normalize.css';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  const calculator = document.querySelector('.calculator__keys');
-  const display = document.querySelector('.calculator__display');
+  const calculator = document.querySelector('.calculator');
+  const display    = calculator.querySelector('.calculator__display');
 
   calculator.querySelectorAll('button').forEach((button) => {
     button.addEventListener('click', e => {
 
-      const keyValue = e.target.textContent;
+      const key = e.target;
+      const keyValue = key.textContent;
+      const keyType = key.dataset.type;
+      const { prevKeytype } = calculator.dataset;
 
-      (display.textContent === '0') ? display.textContent = keyValue : display.textContent += keyValue;
+      // Is this a number key?
+      if (keyType === 'number') {
+        ((display.textContent === '0') || (prevKeytype === 'operator')) ?
+          display.textContent = keyValue : display.textContent += keyValue;
+      }
+
+      // Is this an operator key?
+      if (keyType ===  'operator') {
+        let num1 = parseInt(display.textContent);
+
+        console.log(num1);
+        console.log(keyValue);
+      }
+
+      if (keyType === 'equal') {
+        // perform a calculation
+      }
+
+      calculator.dataset.prevKeytype = keyType;
     });
   });
 
