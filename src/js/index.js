@@ -24,21 +24,34 @@ document.addEventListener('DOMContentLoaded', () => {
         calculator.querySelectorAll('[data-type="operator"]').forEach(keyOperator => keyOperator.dataset.state = '');
         key.dataset.state = 'selected';
 
-        let num1 = parseInt(display.textContent);
-        // console.log(num1);
-        // console.log(keyValue);
-
+        calculator.dataset.firstNum = display.textContent;
+        calculator.dataset.operator = key.classList.value;
       }
 
       if (keyType === 'equal') {
-        // perform a calculation
+        calculator.querySelectorAll('[data-type="operator"]').forEach(keyOperator => keyOperator.dataset.state = '');
+
+        const secondNum = display.textContent;
+        const firstNum  = calculator.dataset.firstNum;
+        const operator  = calculator.dataset.operator;
+
+        display.textContent = calculate(firstNum, secondNum, operator);
       }
 
       calculator.dataset.prevKeytype = keyType;
     });
   });
 
+  function calculate(a, b, operation) {
+    a = parseInt(a);
+    b = parseInt(b);
 
-  //console.log(display);
+    console.log(`${a} ${operation} ${b} equals ${result}`);
+
+    if (operation === 'plus') return a + b;
+    if (operation === 'minus') return a - b;
+    if (operation === 'times') return a * b;
+    if (operation === 'divide') return a / b;
+  }
 
 });
