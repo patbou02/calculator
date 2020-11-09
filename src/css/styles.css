@@ -103,6 +103,8 @@ body {
 [data-type="operator"]:active, [data-type="equal"]:active,
 [data-type="operator"]:focus, [data-type="equal"]:focus { background-color: var(--orange-700); }
 
+[data-state="selected"] { background-color: var(--orange-800); }
+
 [data-type="special"], [data-type="clear"] { background-color: var(--grey-300); }
 [data-type="special"]:active, [data-type="clear"]:active,
 [data-type="special"]:focus, [data-type="clear"]:focus { background-color: var(--grey-500); }

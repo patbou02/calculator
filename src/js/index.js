@@ -21,10 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Is this an operator key?
       if (keyType ===  'operator') {
-        let num1 = parseInt(display.textContent);
+        calculator.querySelectorAll('[data-type="operator"]').forEach(keyOperator => keyOperator.dataset.state = '');
+        key.dataset.state = 'selected';
 
-        console.log(num1);
-        console.log(keyValue);
+        let num1 = parseInt(display.textContent);
+        // console.log(num1);
+        // console.log(keyValue);
+
       }
 
       if (keyType === 'equal') {
